@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Khand:wght@300;400;500;600&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,500&family=Unbounded:wght@200;300;400;500;600;900&family=Urbanist:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap');
+$c1:#525EE0;
+$c2:#6F6B80;
+$f:'Urbanist', sans-serif;
+$c3:#fff7f4;
+@mixin res($zero,$mobile){
+  @media (min-width:$zero) and(max-width:$mobile){
+  @content;
+  }
+}
+.body{
+    font-family:$f;
+}
+.header{
+    background:$c3;
+  .bg-body-tertiary{
+    background:transparent !important;
+  }
+}
+.navbar-brand{
+  font-size:24px;
+  font-family:$f;
+  color:$c1;
+}
+.navbar-expand-lg .navbar-nav{
+  margin-left:150px;
+  font-family:$f;
+
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+  padding:20px;
+  color:black;
+  font-weight:bold;
+  &:hover{
+    color:$c1;
+  }
+}
+.searchandlogin{
+  margin-left:50px;
+  @include res(0px,480px){
+     margin-left:10px;
+  }
+  button{
+    float:left;
+    padding:10px 20px;
+  }
+  .register{
+    margin-left:30px;
+    float:left;
+    padding:5px 20px;
+    background:$c1;
+    display:block;
+    a{text-decoration:none;color:white; font-weight:bold;
+    }
+    i{padding-right:8px;}
+    p{
+       float:right;
+    }
+  }
+}
+.banner{
+  background:url(http://sangalotech.com/html/12/assets/images/hero-bg.jpg);
+  height:100vh;
+  .col-lg-6{
+    p{
+      font-size:20px;
+      color:$c1;
+      font-family:$f;
+      @include res(0px,480px){
+        font-size:10px;
+      }
+    }
+    h2{
+      font-size:70px;
+      font-weight:bold;
+      font-family:$f;
+      @include res(0px,480px){
+        font-size:24px;
+      }
+    }
+    .para1{
+      color:$c2;
+      @include res(0px,480px){
+        font-size:10px;
+      }
+    }
+    .get{
+      padding:10px;
+      background:#525EE0;
+      color:white;
+      width:40%;
+      border-radius:5px;
+      @include res(0px,480px){
+        padding:5px;
+        width:70%;
+      }
+      &:hover{
+        background:black;
+      }
+      span{
+        color:white;
+        font-weight:bold;
+      }
+      i{
+        color:white;
+      }
+    }
+  }
+  .col-lg-6{
+    position:relative;
+    .image1{
+      top:30%;
+      left:2%;
+      @include res(0px,480px){
+        width:70%;
+        height:70%
+      }
+    }
+    .image2{
+      position:absolute;
+      top:3%;
+      left:60%;
+      @include res(0px,480px){
+        display:none;
+      }
+    }
+  }
+}
+.popular{
+  p{
+     text-align:center;
+     font-family:$f;
+     color:$c1;
+     font-weight:bold;
+     font-size:24px;
+     letter-spacing:2px;
+  }
+  h2{
+    text-align:center;
+    font-weight:bold;
+    font-family:$f;
+    font-size:45px;
+  }
+}
+.cat1{
+  .row{
+    .d-flex{
+      background:rgb(230, 224, 224);
+      padding:10px;
+      width:32%;
+      &:hover{
+        background:$c1;
+      }
+      @include res(0px,480px){
+        width:100%;
+      }
+      .icon1{
+        background:white;
+        padding:10px;
+      }
+      .dev{
+        a{
+          text-decoration:none;
+          color:black;
+        }
+      }
+    }
+  }
+}
+.who{
+  .col-lg-6{
+    .image4{
+      position:absolute;
+      top:30%;
+      left:40%;
+      @include res(0px,480px){
+        display:none;
+      }
+    }
+  }
+  .col-lg-6{
+    p{
+      color:$c1;
+      font-size:24px;
+      font-family:$f;
+      font-weight:bold;
+    }
+    h2{
+      font-size:34px;
+      font-weight:bold;
+      font-family:$f;
+    }
+    .d-flex{
+      .imageicon{
+        width:90px;
+        height:50px;
+        background:gray;
+        border-radius:50%;
+        display:block;
+      }
+      .detail{
+        h3{
+          font-size:25px;
+        }
+        .para2{
+          font-size:15px;
+          color:gray;
+          text-transform:lowercase;
+        }
+      }
+    }
+  }
+  .button{
+    padding:10px;
+    background:$c1;
+    width:35%;
+    border-radius:10px;
+    @include res(0px,480px){
+      width:70%;
+    }
+    &:hover{
+      background:black;
+    }
+    a{
+      text-decoration:none;
+      color:white;
+      padding-left:20px;
+      font-weight:bold;
+    }
+    i{
+      padding-left:10px;
+    }
+  }
+}
+.our{
+  background:$c3;
+  .heading1{
+    text-align:center;
+    @include res(0px,480px){
+      text-align:center;
+      font-size:15px;
+    }
+    P{
+      font-size:24px;
+      font-family:$f;
+      color:$c1;
+    }
+    h1{
+      font-size:50px;
+      font-family:$f;
+      font-weight:bold;
+    }
+  }
+  .card{
+    position:relative;
+    span{
+      color:$c1;
+      border-radius:5px;
+      padding:5px;
+      background:white;
+      position:absolute;
+      top:5%;
+      left:5%;
+    }
+    i{
+      color:white;
+      position:absolute;
+      top:5%;
+      left:85%;
+      background:gray;
+      border-radius:50%;
+    }
+    .image5{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+  }
+}
+.banner2{
+  background:$c1;
+   .free{
+    .para2{
+      padding-top:20px;
+      color:white;
+      text-transform:capitalize;
+      font-size:25px;
+      font-weight:bold;
+    }
+    h2{
+      color:white;
+      font-size:33px;
+      font-weight:bold;
+    }
+    .para3{
+      color:white;
+      font-size:20px;
+      padding-top:20px;
+    }
+    a{
+      padding:20px;
+      background:red;
+      border-radius:5px;
+      margin-top:20px;
+      &:hover{
+        background:black;
+      }
+      span{
+          color:white;
+          font-weight:bold;
+      }
+      i{
+        color:white;
+      }
+    }
+   }
+}
+.banner3{
+  .col-lg-12{
+    p{
+      color:$c1;
+      text-align:center;
+      font-size:23px;
+      font-family:$f;
+    }
+    h2{
+         color:black;
+         font-size:34px;
+         font-weight:bold;
+         padding-bottom:20px;
+         text-align:center;
+    }
+  }
+}
+.fotter{
+  .row{
+    .subfotter{
+      .box{
+        h2{
+          font-size:33px;
+          font-family:$f;
+          font-weight:bold;
+        }
+        p{font-size:18px;font-family:$f;}
+        .social-media{
+          a{
+            padding:10px;
+            background:gray;
+            margin:5px;
+            color:white;
+            &:hover{background:$c1;}
+          }
+        }
+      }
+    }
+    .subfotter2{
+      .box3{
+        h2{
+          font-size:33px;font-weight:bold;font-family:$f;
+        }
+        ul{
+          li{ padding:4px;
+            a{
+              text-decoration:none;color:white;
+              &:hover{
+                color:$c1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
